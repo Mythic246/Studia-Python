@@ -1,0 +1,205 @@
+def string_length(str1):
+    count = 0
+    for char in str1:
+        count += 1
+    return count
+print(string_length('msjkwnm1234')) 
+
+
+
+
+
+def string_both_ends(str):
+    if len(str) < 2:
+        return '' 
+    return str[0:2] + str[-2:]
+print(string_both_ends('python')) 
+print(string_both_ends('g2'))         
+print(string_both_ends('j'))          
+
+
+
+
+  
+
+def remove(str, n):  
+    start = str[:n]
+    end = str[n+1:]
+    return start + end
+print(remove_char('Python', 5))  
+print(remove_char('Python', 1)) 
+print(remove_char('Python', 4)) 
+
+
+
+  
+  def find_longest(wlist):
+    dlugosc = []
+    for n in wlist:
+        dlugosc.append((len(n), n))
+    dlugosc.sort()
+    return dlugosc[-1][0], dlugosc[-1][1]
+wynik = find_longest(["PHP", "Java", "Console"])
+print("\nLongest word: ", wynik[1])
+print("Length of the longest word: ", wynik[0])
+
+
+
+
+
+def add(test):
+    length = len(test)
+    if length > 2:
+        if test[-3:] == 'ing':
+            test += 'ly'
+        else:
+            test += 'ing'
+    return test
+print(add('jr')) 
+print(add('ner'))
+print(add('king'))  
+
+
+
+
+
+
+def nieparzyste(str):
+    wynik = ""   
+    for i in range(len(str)): 
+       if i % 2 == 0:
+          wynik = wynik + str[i]
+    return wynik
+print(nieparzyste('nsajshcuajrk'))  
+print(nieparzyste('python'))  
+
+
+
+
+
+
+user = input("Twój ulubiony posiłek? ")
+print("Mój ulubiony posiłek to ", user.upper())
+print("Mój ulubiony posiłek to ", user.lower()) 
+
+
+
+
+
+
+
+def lexicographic(s):
+    return sorted(sorted(s), key=str.upper)
+print(lexicographic('youtuve')) 
+print(lexicographic('niebieski15'))  
+
+
+
+
+test = 'Python Exercises\n'
+print(test)
+print(test.rstrip()) 
+print(test)
+
+
+
+
+
+import textwrap
+przyklad =
+  '''
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  '''
+print()
+print(textwrap.fill(przyklad, width=50))
+print()
+
+
+
+
+x = 5.238123
+y = 71.6312472
+print()
+print("Original: ", x)
+print("Format: "+"{:.2f}".format(x))
+print("Original: ", y)
+print("Formatted: "+"{:.2f}".format(y))
+print() 
+
+
+
+
+x = 5
+y = 732
+print()
+print("Original: ", x)
+print("Format: "+"{:0>2d}".format(x))
+print("Original: ", y)
+print("Formatted: "+"{:0>6d}".format(y))
+print()
+
+
+
+
+
+
+def rep(str1):
+    temp = set()
+    for word in str1.split():
+        if word in temp:
+            return word 
+        else:
+            temp.add(word)  
+    return 'None' 
+print(rep(" br oc ny br"))
+print(rep("br ve cw br ve cw"))
+print(rep("ce bt vr vr ve bt"))
+print(rep("ad ny fs")) 
+
+
+
+
+
+
+
+def vowel(text):
+    vowels = "aeiuoAEIOU"
+    print(len([letter for letter in text if letter in vowels]))
+    print([letter for letter in text if letter in vowels])
+vowel('w3schools') 
+
+
+
+
+x = 7
+y= 872
+print()
+print("Original :", x)
+print("Format: "+"{:*< 3d}".format(x))
+print("Original :", y)
+print("Format: "+"{:*< 7d}".format(y))
+print()
+
+
+
+
+
+def max_0(input_str):
+   return max(map(len,input_str.split('1'))) 
+text1 = '11000100110'
+print("Original string:" + text1)  
+print("Maximum 0’s:")
+print(max_0(text1))
+text1 = '110110000010001000101010110101011101' 
+print("Original:" + text1) 
+print("Maximum 0’s:")
+print(max_0(text1)) 
+
+
+
+
+  
