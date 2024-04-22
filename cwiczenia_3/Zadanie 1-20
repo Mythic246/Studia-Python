@@ -202,4 +202,48 @@ print(max_0(text1))
 
 
 
+
+def suma_liczb(str1):
+    suma = 0
+    for char in str1:
+        if char.isdigit():
+            liczba = int(char)
+            suma += liczba
+    return suma
+wynik1 = suma_liczb("8gts72nbvb96")
+print(wynik1)
+wynik2 = suma_liczb("a7ghs892hn")
+print(wynik2)
+
+
+
+
+def rgb_to_hex(r, g, b):
+    return ('{:02X}' * 3).format(r, g, b)
+print(rgb_to_hex(150, 16, 101))
+print(rgb_to_hex(255, 255, 255))
+print(rgb_to_hex(0, 0, 0))
+print(rgb_to_hex(0, 128, 0))
+print(rgb_to_hex(124, 124, 124)) 
+
+
+def count_chars(str):
+  duze, male, lb, zs = 0, 0, 0, 0
+  for i in range(len(str)):
+    if str[i] >= 'A' and str[i] <= 'Z':
+      duze += 1
+    elif str[i] >= 'a' and str[i] <= 'z':
+      male += 1
+    elif str[i] >= '0' and str[i] <= '9':
+      lb += 1
+    else:
+      zs += 1
+  return duze, male, lb, zs
+str = "@znvGe9G82A@mVva@3Sw$n1"
+print("Original Substrings:",str)
+u, l, n, s = count_chars(str)
+print('\nDuże litery: ',u) 
+print('Małe litery: ',l)
+print('Liczby: ',n)
+print('Znaki Specjalne: ',s) 
   
