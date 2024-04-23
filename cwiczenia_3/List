@@ -1,1 +1,47 @@
+def max_nmb(list):
+    max = list[0]
+    for a in list:
+        if a > max:
+            max = a
+    return max
+print(max_nmb([10, 23, 8, -2]))
+
+
+
+
+
+def min_nmb(list):
+    min = list[0]
+    for a in list:
+        if a < min:
+            min = a
+    return min
+print(min_nmb([10, 23, 8, -2]))
+
+
+
+
+a = [15, 84, 65, 78, 15, 87, 15, 84]
+duplikaty = set()
+unkaty = []
+for x in a:
+    if x not in duplikaty:
+        unkaty.append(x)
+        duplikaty.add(x)
+print(duplikaty) 
+
+
+
+
+
+original = [4, 87, 15, 1, 65]
+Copy = list(original)
+print(original)
+print(Copy)
+
+
+
+
+
+
 
