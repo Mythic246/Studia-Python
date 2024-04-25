@@ -1,1 +1,193 @@
+nl = []
+for x in range(1500, 2701):
+    if (x % 7 == 0) and (x % 5 == 0):
+        nl.append(str(x))
+print(','.join(nl))
 
+
+
+
+temp = input("Podaj temperature: (np., 45F, 102C) : ")
+tempratur = int(temp[:-1])
+i_convention = temp[-1]
+if celc.upper() == "C":
+    result = int(round((9 * tempratur) / 5 + 32))
+    far = "Fahrenheit" 
+elif celc.upper() == "F":
+    result = int(round((tempratur - 32) * 5 / 9))
+    far = "Celsius"  
+else:
+    print("Podaj odpowiednią miare.")
+    quit()
+print("Temperatura w", far, "to", result, "stopni.") 
+
+
+
+
+
+import random
+cel, proba = random.randint(1, 10), 0
+while cel != proba:
+    proba = int(input('Zgadnij liczbe pomiedzy 1 a 10 : '))
+print('Well guessed!') 
+
+
+
+
+n = 5
+for i in range(n):
+    for j in range(i):
+        print('* ', end="")
+    print('')
+for i in range(n, 0, -1):
+    for j in range(i):
+        print('* ', end="")
+    print('') 
+
+
+
+
+
+
+slowo = input("Podaj slowo: ")
+for char in range(len(word) - 1, -1, -1):
+    print(slowo[char], end="")
+print("\n")
+
+
+
+
+numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+count_odd = 0
+count_even = 0
+for x in numbers:
+    if not x % 2: 
+        count_even += 1
+    else:
+        count_odd += 1
+print("Liczba parzystych:", count_even)
+print("Liczba nieparzystych:", count_odd) 
+
+
+
+
+
+lista = [1371, 17.23, 162-612j, True, 'w3schools', (10, -1), [55, 112], {"class": 'V', "section": 'A'}]
+for item in lista:
+    print("Type of", item, "is", type(item)) 
+
+
+
+
+for x in range(6):
+    if (x == 3 or x == 6):
+        continue
+    print(x, end=' ')
+print("\n")
+
+
+
+
+
+x, y = 0, 1
+while y < 50:
+    print(y)
+x, y = y, x + y
+
+
+
+
+
+for fizzbuzz in range(51):
+    if fizzbuzz % 3 == 0 and fizzbuzz % 5 == 0:
+        print("fizzbuzz")
+        continue
+    elif fizzbuzz % 3 == 0:
+        print("fizz")
+        continue
+    elif fizzbuzz % 5 == 0:
+        print("buzz")
+        continue
+    print(fizzbuzz) 
+
+
+
+
+row_num = int(input("Liczba rzęów: "))
+col_num = int(input("Liczba kolumn: "))
+multi_list = [[0 for col in range(col_num)] for row in range(row_num)]
+for row in range(row_num):
+    for col in range(col_num):
+        multi_list[row][col] = row * col
+print(multi_list) 
+
+
+
+
+
+
+lines = []
+while True:
+    l = input()
+    if l:
+        lines.append(l.upper())
+    else:
+        break;
+for l in lines:
+    print(l) 
+
+
+
+
+
+
+items = []
+num = [x for x in input().split(',')]
+for p in num:
+    x = int(p, 2)
+    if not x % 5:
+        items.append(p)
+print(','.join(items))
+
+
+
+
+s = input("Podaj stringa")
+d = l = 0
+for c in s:
+    if c.isdigit():
+        d = d + 1
+    elif c.isalpha():
+        l = l + 1
+    else:
+        pass
+print("Litery", l)
+print("Znaki", d)
+
+
+
+
+
+
+import re
+p = input("Podaj hasło")
+x = True
+while x:  
+    if (len(p) < 6 or len(p) > 12):
+        break
+    elif not re.search("[a-z]", p):
+        break
+    elif not re.search("[0-9]", p):
+        break
+    elif not re.search("[A-Z]", p):
+        break
+    elif not re.search("[$#@]", p):
+        break
+    elif re.search("\s", p):
+        break
+    else:
+        print("Hasło poprawne")
+        x = False
+        break
+if x:
+    print("Hasło niepoprawne")
