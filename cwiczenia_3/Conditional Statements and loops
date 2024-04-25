@@ -191,3 +191,78 @@ while x:
         break
 if x:
     print("Hasło niepoprawne")
+
+
+
+
+
+items = []
+for i in range(100, 401):
+    s = str(i)
+    if (int(s[0]) % 2 == 0) and (int(s[1]) % 2 == 0) and (int(s[2]) % 2 == 0):
+        items.append(s)
+print(",".join(items)) 
+
+
+
+
+
+
+
+
+
+result_str = ""
+for row in range(0, 7):
+    for column in range(0, 7):
+        if (((column == 1 or column == 5) and row != 0) or ((row == 0 or row == 3) and (column > 1 and column < 5))):
+            result_str = result_str + "*"  # Append '*' to the 'result_str'
+        else:
+            result_str = result_str + " "  # Append space (' ') to the 'result_str'
+    result_str = result_str + "\n"  # Add a newline character after each row in 'result_str'
+print(result_str)
+
+
+
+
+
+
+result_str = ""
+for row in range(0, 7):
+    for column in range(0, 7):
+        if (column == 1 or ((row == 0 or row == 6) and (column > 1 and column < 5)) or (column == 5 and row != 0 and row != 6)):
+            result_str = result_str + "*"  # Append '*' to the 'result_str'
+        else:
+            result_str = result_str + " "  # Append space (' ') to the 'result_str'
+    result_str = result_str + "\n"  # Add a newline character after each row in 'result_str'
+print(result_str)
+
+
+
+
+
+
+
+result_str = ""
+for row in range(0, 7):
+    for column in range(0, 7):
+        if (column == 1 or ((row == 0 or row == 6) and (column > 1 and column < 6)) or (row == 3 and column > 1 and column < 5)):
+            result_str = result_str + "*"  # Append '*' to the 'result_str'
+        else:
+            result_str = result_str + " "  # Append space (' ') to the 'result_str'
+    result_str = result_str + "\n"  # Add a newline character after each row in 'result_str'
+print(result_str)
+
+
+
+
+
+
+result_str = ""
+for row in range(0, 7):
+    for column in range(0, 7):
+        if ((column == 1 and row != 0 and row != 6) or ((row == 0 or row == 6) and column > 1 and column < 5) or (row == 3 and column > 2 and column < 6) or (column == 5 and row != 0 and row != 2 and row != 6)):
+            result_str = result_str + "*"  # Append '*' to the 'result_str'
+        else:
+            result_str = result_str + " "  # Append space (' ') to the 'result_str'
+    result_str = result_str + "\n"  # Add a newline character after each row in 'result_str'
+print(result_str) 
