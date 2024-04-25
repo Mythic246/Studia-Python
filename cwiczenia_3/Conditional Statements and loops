@@ -50,7 +50,7 @@ for i in range(n, 0, -1):
 
 
 slowo = input("Podaj slowo: ")
-for char in range(len(word) - 1, -1, -1):
+for char in range(len(slowo) - 1, -1, -1):
     print(slowo[char], end="")
 print("\n")
 
@@ -92,7 +92,7 @@ print("\n")
 x, y = 0, 1
 while y < 50:
     print(y)
-x, y = y, x + y
+    x, y = y, x + y
 
 
 
@@ -126,28 +126,17 @@ print(multi_list)
 
 
 
-lines = []
-while True:
-    l = input()
-    if l:
-        lines.append(l.upper())
-    else:
-        break;
-for l in lines:
-    print(l) 
+n = int(input("Ppodaj liczbe: "))
+for i in range(1, 11):
+    print(n, 'x', i, '=', n * i)
 
 
 
 
 
 
-items = []
-num = [x for x in input().split(',')]
-for p in num:
-    x = int(p, 2)
-    if not x % 5:
-        items.append(p)
-print(','.join(items))
+for i in range(10):
+    print(str(i) * i)
 
 
 
@@ -215,10 +204,10 @@ result_str = ""
 for row in range(0, 7):
     for column in range(0, 7):
         if (((column == 1 or column == 5) and row != 0) or ((row == 0 or row == 3) and (column > 1 and column < 5))):
-            result_str = result_str + "*"  # Append '*' to the 'result_str'
+            result_str = result_str + "*" 
         else:
-            result_str = result_str + " "  # Append space (' ') to the 'result_str'
-    result_str = result_str + "\n"  # Add a newline character after each row in 'result_str'
+            result_str = result_str + " " 
+    result_str = result_str + "\n" 
 print(result_str)
 
 
@@ -230,10 +219,10 @@ result_str = ""
 for row in range(0, 7):
     for column in range(0, 7):
         if (column == 1 or ((row == 0 or row == 6) and (column > 1 and column < 5)) or (column == 5 and row != 0 and row != 6)):
-            result_str = result_str + "*"  # Append '*' to the 'result_str'
+            result_str = result_str + "*" 
         else:
-            result_str = result_str + " "  # Append space (' ') to the 'result_str'
-    result_str = result_str + "\n"  # Add a newline character after each row in 'result_str'
+            result_str = result_str + " "  
+    result_str = result_str + "\n" 
 print(result_str)
 
 
@@ -246,10 +235,10 @@ result_str = ""
 for row in range(0, 7):
     for column in range(0, 7):
         if (column == 1 or ((row == 0 or row == 6) and (column > 1 and column < 6)) or (row == 3 and column > 1 and column < 5)):
-            result_str = result_str + "*"  # Append '*' to the 'result_str'
+            result_str = result_str + "*" 
         else:
-            result_str = result_str + " "  # Append space (' ') to the 'result_str'
-    result_str = result_str + "\n"  # Add a newline character after each row in 'result_str'
+            result_str = result_str + " "  
+    result_str = result_str + "\n" 
 print(result_str)
 
 
@@ -261,8 +250,8 @@ result_str = ""
 for row in range(0, 7):
     for column in range(0, 7):
         if ((column == 1 and row != 0 and row != 6) or ((row == 0 or row == 6) and column > 1 and column < 5) or (row == 3 and column > 2 and column < 6) or (column == 5 and row != 0 and row != 2 and row != 6)):
-            result_str = result_str + "*"  # Append '*' to the 'result_str'
+            result_str = result_str + "*" 
         else:
-            result_str = result_str + " "  # Append space (' ') to the 'result_str'
-    result_str = result_str + "\n"  # Add a newline character after each row in 'result_str'
+            result_str = result_str + " " 
+    result_str = result_str + "\n" 
 print(result_str) 
