@@ -33,13 +33,6 @@ print(duplikaty)
 
 
 
-s = ['a', 'b', 'c', 'd']= single string
-str1 = ''.join(s)
-print(str1)
-
-
-
-
 original = [4, 87, 15, 1, 65]
 Copy = list(original)
 print(original)
