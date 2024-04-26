@@ -33,6 +33,12 @@ print(duplikaty)
 
 
 
+s = ['a', 'b', 'c', 'd']= single string
+str1 = ''.join(s)
+print(str1)
+
+
+
 
 original = [4, 87, 15, 1, 65]
 Copy = list(original)
@@ -41,7 +47,203 @@ print(Copy)
 
 
 
+num = [0, 44, 25, 35, 8354, 20, 27]
+num = [x for x in num if x % 2 != 0]
+print(num)
+
+
+
+from random import shuffle
+color = ['Red', 'Green', 'Blue', 'Black', 'Pink', 'Orange']
+shuffle(color)
+print(color)
 
 
 
 
+def printValues():
+    l = list()
+    for i in range(1, 21):
+        l.append(i**2)
+    print(l[:5])
+    print(l[-5:])
+printValues()
+
+
+
+
+color1 = "Red", "Green", "Orange", "White"
+color2 = "Black", "Green", "White", "Pink"
+print(set(color1) & set(color2))
+
+
+
+
+from itertools import zip_longest, chain, tee
+def replace2copy(lst):
+    lst1, lst2 = tee(iter(lst), 2)
+    return list(chain.from_iterable(zip_longest(lst[1::2], lst[::2])))
+n = [0, 1, 2, 3, 4, 5]
+print(replace2copy(n)) 
+
+
+
+def is_Sublist(l, s):
+    sub_set = False  
+    if s == []:
+        sub_set = True
+    elif s == l:
+        sub_set = True
+    elif len(s) > len(l):
+        sub_set = False
+    else:
+        for i in range(len(l)):
+            if l[i] == s[0]:
+                n = 1
+                while (n < len(s)) and (l[i + n] == s[n]):
+                    n += 1
+                if n == len(s):
+                    sub_set = True
+    return sub_set
+a = [2, 4, 3, 5, 7]
+b = [4, 3]
+c = [3, 7]
+print(is_Sublist(a, b))
+print(is_Sublist(a, c)) 
+
+
+
+
+
+
+list1 = [1, 2, 3, 0]
+list2 = ['Red', 'Green', 'Black']
+final_list = list1 + list2
+print(final_list)
+
+
+
+
+num = [10, 30, 4, -6]
+print(num.index(30))
+
+
+
+
+
+def second_largest(numbers):
+    if len(numbers) < 2:
+        return
+    if len(numbers) == 2 and numbers[0] == numbers[1]:
+        return
+    dup_items = set()
+    uniq_items = []
+    for x in numbers:
+        if x not in dup_items:
+            uniq_items.append(x)
+            dup_items.add(x)
+    uniq_items.sort()
+    return uniq_items[-2]
+print(second_largest([1, 2, 3, 4, 4]))
+print(second_largest([1, 1, 1, 0, 0, 0, 2, -2, -2]))
+print(second_largest([2, 2])) 
+print(second_largest([1]))
+
+
+
+
+my_list = [10, 20, 30, 40, 20, 50, 60, 40]
+print("Original List : ", my_list)
+my_set = set(my_list)
+my_new_list = list(my_set)
+print("List of unique numbers : ", my_new_list)
+
+
+
+
+s = ['a', 'b', 'c', 'd']
+str1 = ''.join(s)
+print(str1)
+
+
+
+
+import random
+color_list = ['Red', 'Blue', 'Green', 'White', 'Black']
+print(random.choice(color_list))
+
+
+
+
+def flatten(nums):
+    return [x for y in nums for x in y]
+nums = [[1, 2, 3, 4], [5, 6, 7, 8]
+print("Original list elements:")
+print(nums)
+print("\nFlatten the said list:")
+print(flatten(nums)
+nums = [[2, 4, 3], [1, 5, 6], [9], [7, 9, 0]]
+print("\nOriginal list elements:")
+# Print the original list 'nums'
+print(nums)
+print("\nFlatten the said list:")
+print(flatten(nums))
+
+
+
+
+def second_smallest(numbers):
+    if len(numbers) < 2:
+        return
+    if len(numbers) == 2 and numbers[0] == numbers[1]:
+        return
+    dup_items = set()
+    uniq_items = []
+    for x in numbers:
+        if x not in dup_items:
+            uniq_items.append(x)
+            dup_items.add(x)
+    uniq_items.sort()
+    return uniq_items[1]
+print(second_smallest([1, 2, -8, -2, 0, -2]))
+print(second_smallest([1, 1, 0, 0, 2, -2, -2]))
+print(second_smallest([1, 1, 1, 0, 0, 0, 2, -2, -2]))
+print(second_smallest([2, 2])) 
+print(second_smallest([2]))  
+
+
+
+
+
+list1 = [10, 10, 0, 0, 10]
+list2 = [10, 10, 10, 0, 0]
+list3 = [1, 10, 10, 0, 0]
+print('Compare list1 and list2')
+print(' '.join(map(str, list2)) in ' '.join(map(str, list1 * 2)))
+print('Compare list1 and list3')
+print(' '.join(map(str, list3)) in ' '.join(map(str, list1 * 2))) 
+
+
+
+
+
+def count_range_in_list(li, min, max):
+    ctr = 0
+    for x in li:
+        if min <= x <= max:
+            ctr += 1
+    return ctr
+list1 = [10, 20, 30, 40, 40, 40, 70, 80, 99]
+print(count_range_in_list(list1, 40, 100))
+list2 = ['a', 'b', 'c', 'd', 'e', 'f']
+print(count_range_in_list(list2, 'a', 'e')) 
+
+
+
+
+from itertools import zip_longest, chain, tee
+def replace2copy(lst):
+    lst1, lst2 = tee(iter(lst), 2)
+    return list(chain.from_iterable(zip_longest(lst[1::2], lst[::2])))
+n = [0, 1, 2, 3, 4, 5]
+print(replace2copy(n)) 
