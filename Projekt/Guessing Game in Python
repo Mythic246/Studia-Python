@@ -1,0 +1,59 @@
+import random
+
+def choooseDifficulty():
+    print("Choose your desired level of hardness: ")
+    print("1. Easy (1-10)")
+    print("2. Medium (1-100")
+    print("3. Hard (1-1000)")
+    print("4. Lucky (1-10000)")
+    
+    difficulty = int(input("Decide on our level: "))
+    if difficulty == 1:
+        return 1, 10
+    elif difficulty == 2:
+        return 1, 100
+    elif difficulty == 3:
+        return 1, 1000
+    elif difficulty == 4:
+        return 1, 10000
+    else:
+        print("Wrong choice. Giving you the hardest one :)")
+        return 1, 10000
+
+def guessNumber():
+    minVal, maxVal = choooseDifficulty()
+    numberToGuess = random.randint(minVal, maxVal)
+    attempts = 0
+    maxAttempts = 15
+    history = []
+    
+    print(f"Guess from {minVal} to {maxVal}. You got {maxAttempts} attemps")
+    
+    while attempts < maxAttempts:
+        userGuess = int(input("Choose your number: "))
+        attempts += 1
+        history.append(userGuess)
+        
+        if userGuess < numberToGuess:
+            print("Too low... Try again: ")
+        elif userGuess > numberToGuess:
+            print("Too high... Try again: ")
+        else:
+            print(f"Bullseye. It only took you {attempts} attemps.")
+            break
+            
+        attemptsLeft = maxAttempts - attempts
+        print(f"Also, you're left with {attemptsLeft} attempts")
+    
+    else:
+        print(f"You lost. Would've won if you tried {numberToGuess} instead of: ", history)
+    
+    restart = input("Wanna play a game? (y/n)")
+    if restart.lower() == "y":
+        guessNumber()
+    else:
+        print("Thanks then, come again later.")
+    
+if __name__ == "__main__":
+    guessNumber()
+        
